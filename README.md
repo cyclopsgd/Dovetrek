@@ -5,15 +5,19 @@ This project is to help "solve" the West Warwickshire Explorer Scouts annual hik
 Teams get given a list of checkpoints, their grid references and the checkpoint open and closing times. Teams then have to visit as many of those checkpoints as possible when they are open and make it back to the finish 7 hours after their start time.
 
 These notebooks were developed in Azure Databricks, though i'm trying to get them compatible with most jupyter notebook environments so you can test it out for yourself. 
-It should work with 
+It should also work with
+- AWS Databricks 
 - [mybinder](https://mybinder.org/)
 - [Google Collab](https://colab.research.google.com/github/liamj-f/Dovetrek/blob/main/)
 
 ## Requirements
 All three of the ipynb files reference different API keys for the following services:
-- Azure Maps
+- Azure Maps 
 - Bing Maps
 - Google Maps
+-  - Maps Static API
+   - Elevations API
+   - Routes API
 - Ordnance Survey data hub
 - OpenRouteService
 
@@ -25,6 +29,7 @@ Therefore, rather than having to enter each api key induvidually, you can create
   "OrdnanceSurveyAPIKey":"xxxx",
   "OpenRouteServiceAPIKey":"xxxx",
   "GoogleMapsAPIKey":"xxxx"
+  "DovetrekRepoPAT":"xxxx"
 }
 ```
 To access this file via API, you'll need to create a perosnal access token. I suggest a fine-grained token, with read only access to code and metadata of the repo containing the secret file. 
