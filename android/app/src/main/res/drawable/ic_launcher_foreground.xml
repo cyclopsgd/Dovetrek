@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Compass / hiking icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 L42,72 L54,62 L66,72 Z" />
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M54,38 L46,66 L54,58 L62,66 Z" />
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:pathData="M54,24 L54,28 M54,76 L54,80 M24,54 L28,54 M80,54 L76,54"
+        android:fillColor="#00000000" />
+</vector>

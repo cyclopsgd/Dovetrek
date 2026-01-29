@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Summary Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/route_summary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Mode B highlight -->
+            <TextView
+                android:id="@+id/text_mode_b_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#BF360C"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <!-- Row: Checkpoints -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_checkpoints"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/text_checkpoints"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_speed"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/text_speed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_distance"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/text_distance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_height_gain"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/text_height_gain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_finish_time"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/text_finish_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="--"
+                    android:textStyle="bold"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="12sp"
+                android:textColor="#555555" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Route Card Table -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Column Headers -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:background="#E8F5E9">
+
+                <TextView android:layout_width="30dp" android:layout_height="wrap_content"
+                    android:text="#" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="center" />
+                <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                    android:text="From" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="start" />
+                <TextView android:layout_width="60dp" android:layout_height="wrap_content"
+                    android:text="To" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="start" />
+                <TextView android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="Dist" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="end" />
+                <TextView android:layout_width="45dp" android:layout_height="wrap_content"
+                    android:text="Hght" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="end" />
+                <TextView android:layout_width="45dp" android:layout_height="wrap_content"
+                    android:text="Trvl" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="end" />
+                <TextView android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="Arrive" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="center" />
+                <TextView android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="Slot" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="center" />
+                <TextView android:layout_width="35dp" android:layout_height="wrap_content"
+                    android:text="Open" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="center" />
+                <TextView android:layout_width="40dp" android:layout_height="wrap_content"
+                    android:text="Wait" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="end" />
+                <TextView android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="Depart" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="center" />
+                <TextView android:layout_width="45dp" android:layout_height="wrap_content"
+                    android:text="Cumul" android:textSize="11sp" android:textStyle="bold"
+                    android:textColor="#1B5E20" android:gravity="end" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_route_card"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Bottom buttons - Row 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/back"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginEnd="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_maps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/open_maps"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginEnd="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_export"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/export"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginEnd="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/share"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+    </LinearLayout>
+
+    <!-- Bottom buttons - Row 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_export_gpx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/export_gpx"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_marginEnd="4dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_track"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_tracking"
+            style="@style/Widget.Material3.Button" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+# Built files
+build/
+app/build/
+app/.cxx/
+*.apk
+!*-release.apk
+
+# Gradle
+.gradle/
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+
+# Keystore (keep release keystore for signing)
+# app/release-keystore.jks

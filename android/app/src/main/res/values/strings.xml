@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DoveTrek</string>
+    <string name="app_subtitle">Route Solver</string>
+    <string name="data_files">Data Files</string>
+    <string name="load_openings_csv">Load Openings CSV</string>
+    <string name="load_distances_csv">Load Distances CSV</string>
+    <string name="no_file_selected">No file selected</string>
+    <string name="parameters">Parameters</string>
+    <string name="speed_hint">Walking Speed (km/h)</string>
+    <string name="speed_default_label">Walking Speed: 5.3 km/h</string>
+    <string name="dwell_hint">Dwell Time (min)</string>
+    <string name="find_best_route">Find Best Route</string>
+    <string name="find_min_speed">Find Min Speed for All CPs</string>
+    <string name="route_summary">Route Summary</string>
+    <string name="label_checkpoints">Checkpoints:</string>
+    <string name="label_speed">Walking Speed:</string>
+    <string name="label_distance">Total Distance:</string>
+    <string name="label_height_gain">Height Gain:</string>
+    <string name="label_finish_time">Finish Time:</string>
+    <string name="back">Back</string>
+    <string name="open_maps">Maps</string>
+    <string name="export">Export</string>
+    <string name="share">Share</string>
+
+    <!-- Feature 2: GPX Export -->
+    <string name="export_gpx">GPX</string>
+    <string name="gpx_exported">GPX file exported</string>
+    <string name="gpx_export_failed">GPX export failed</string>
+    <string name="no_coordinates">No coordinates available for GPX</string>
+
+    <!-- Feature 3: Checkpoint Exclusion -->
+    <string name="include_checkpoints">Include Checkpoints</string>
+    <string name="checkpoint_hint">Uncheck to exclude from route calculation</string>
+
+    <!-- Feature 4: Progress Tracker -->
+    <string name="start_tracking">Track</string>
+    <string name="progress_tracker">Progress Tracker</string>
+    <string name="visited">Visited</string>
+    <string name="pending_status">Pending</string>
+    <string name="current">Current</string>
+    <string name="on_schedule">On Schedule</string>
+    <string name="ahead_of_schedule">Ahead by %s</string>
+    <string name="behind_schedule">Behind by %s</string>
+    <string name="progress_format">%1$d / %2$d visited</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="actual">Actual</string>
+    <string name="status">Status</string>
+    <string name="reset_tracking">Reset</string>
+    <string name="tracking_not_started">Start tracking to mark checkpoints as visited</string>
+</resources>

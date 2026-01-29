@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="6dp"
+    android:minHeight="36dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/text_leg"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_from"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="start" />
+
+    <TextView
+        android:id="@+id/text_to"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="start" />
+
+    <TextView
+        android:id="@+id/text_dist"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="end" />
+
+    <TextView
+        android:id="@+id/text_height"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="end" />
+
+    <TextView
+        android:id="@+id/text_travel"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="end" />
+
+    <TextView
+        android:id="@+id/text_arrival"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_slot"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_open"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_wait"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="end" />
+
+    <TextView
+        android:id="@+id/text_depart"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_cumulative"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="end" />
+
+</LinearLayout>
